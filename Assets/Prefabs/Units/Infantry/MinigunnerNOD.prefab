@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4192825414894736}
   - component: {fileID: 114270157118376212}
   m_Layer: 0
-  m_Name: Minigunner
+  m_Name: MinigunnerNOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,3 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57cf8e83c1c5e64a8d0646c2f0a34dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitType: {fileID: 11400000, guid: 94ff8d0a7776b3e428a7106b19bc7a96, type: 2}
+  healthPoints: {fileID: 11400000, guid: c94d634f1e32cf0468e440f2b813c60e, type: 2}
+  weapon: {fileID: 11400000, guid: dd61225f405f6104abbf0d220f602a10, type: 2}
+  availableTo:
+  - {fileID: 11400000, guid: 0db2f9b70f72ec448aa755df2980653d, type: 2}
