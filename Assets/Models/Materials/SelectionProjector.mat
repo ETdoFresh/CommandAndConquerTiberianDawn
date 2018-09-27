@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SelectionProjector
-  m_Shader: {fileID: 4800000, guid: c0ace1ca4bc0718448acf798c93d52d9, type: 3}
+  m_Shader: {fileID: 4800000, guid: 374ade6ffe64e1b478a7e5ea6c15e924, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,13 +39,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: faacfa4aae3265a4cb29582b9d9aaa5e, type: 3}
+        m_Texture: {fileID: 2800000, guid: fe0fbd36072963c4fa34faefc3e4b9d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Intensity: 10
+    - _Multiplier: 3
     m_Colors:
     - BumpMapScale: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.98765564, g: 1, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ProjectorClip_0: {r: -0.015438232, g: -0.025866693, b: 0.14460614, a: 0.29360974}
     - _ProjectorClip_1: {r: 0.0047582523, g: 0.14523815, b: 0.026487738, a: 0.0030641258}
     - _ProjectorClip_2: {r: -0.015438232, g: -0.025866693, b: 0.14460614, a: 0.29360974}

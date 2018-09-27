@@ -18,6 +18,7 @@
   - [ ] Make unit follow other units
 
 ## Iteration 1 Complete
+- [X] Improve the selection square around unit
 - [X] Make units individually moveable
 - [X] Make units selectable
 - [X] Finish add properties to Unit.cs
