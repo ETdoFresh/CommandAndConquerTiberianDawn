@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.AI;
 
 public class Unit : MonoBehaviour
 {
@@ -8,22 +8,34 @@ public class Unit : MonoBehaviour
     public Faction affiliation;
     public string role;
     public Weapon weapon;
-    public string requiredToBuild;
+    public ProducerType[] requiredToBuild;
 
     [Header("Properties")]
-    public FloatValue hitPoints;
-    public string armorType;
+    public HitPoints hitPoints;
+    public ArmorType armorType;
 
     [Header("Production")]
-    public FloatValue cost;
-    public FloatValue buildTime;
-    public string produceBy;
+    public Cost cost;
+    public BuildTime buildTime;
+    public ProducerType produceBy;
 
     [Header("Combat")]
-    public FloatValue groundAttack;
-    public FloatValue airAttack;
-    public FloatValue coolDown;
-    public FloatValue speed;
-    public FloatValue attackRange;
-    public FloatValue sightRange;
+    public GroundAttack groundAttack;
+    public AirAttack airAttack;
+    public Cooldown coolDown;
+    public Speed speed;
+    public AttackRange attackRange;
+    public SightRange sightRange;
+
+    [SerializeField] private NavMeshAgent navMeshAgent;
+
+    private void OnValidate()
+    {
+        navMeshAgent = navMeshAgent ?? GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
+    {
+        if (navMeshAgent) navMeshAgent.speed = speed;
+    }
 }

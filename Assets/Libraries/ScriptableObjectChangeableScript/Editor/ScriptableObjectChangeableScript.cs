@@ -15,9 +15,12 @@ public class ScriptableObjectChangeableScript : Editor
     public override void OnInspectorGUI()
     {
         EditorGUI.BeginChangeCheck();
-        EditorGUI.BeginDisabledGroup(disabled);
-        EditorGUILayout.PropertyField(script);
-        EditorGUI.EndDisabledGroup();
+
+        if (!disabled)
+            EditorGUILayout.PropertyField(script, new GUIContent("Changeable Script"));
+
+        base.OnInspectorGUI();
+
         if (EditorGUI.EndChangeCheck())
             serializedObject.ApplyModifiedProperties();
     }

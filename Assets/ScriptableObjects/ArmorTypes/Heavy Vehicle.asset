@@ -8,7 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 304802d9a13a97349ae3c3b8b241f588, type: 3}
-  m_Name: Minigunner
+  m_Script: {fileID: 11500000, guid: a832a4fc126c693429b846431497437c, type: 3}
+  m_Name: Heavy Vehicle
   m_EditorClassIdentifier: 
-  value: 3.5

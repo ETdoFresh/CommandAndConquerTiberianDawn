@@ -51,3 +51,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57cf8e83c1c5e64a8d0646c2f0a34dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitType: {fileID: 11400000, guid: 94ff8d0a7776b3e428a7106b19bc7a96, type: 2}
+  affiliation: {fileID: 11400000, guid: 66e9ea1314f3938438ed1c4a22656625, type: 2}
+  role: 
+  weapon: {fileID: 11400000, guid: 559c75d91b374fa43be4bf630bfb3b42, type: 2}
+  requiredToBuild: 
+  hitPoints: {fileID: 11400000, guid: 1905742254c21ce429e4a1f44bcdb639, type: 2}
+  armorType: 
+  cost: {fileID: 11400000, guid: 7cb60702ea19bb1488fb0c841444855e, type: 2}
+  buildTime: {fileID: 11400000, guid: b7e796bd923fa544ea42d57d047783f3, type: 2}
+  produceBy: 
+  groundAttack: {fileID: 11400000, guid: 8d168b05a8abacf45af33644b2b32157, type: 2}
+  airAttack: {fileID: 11400000, guid: 012754f97b105c44d83ec3351dd06116, type: 2}
+  coolDown: {fileID: 11400000, guid: 1e6f1d78a928f6d41b29eea86414e192, type: 2}
+  speed: {fileID: 11400000, guid: 6aa91bb79e57146458963f2e27b6a3f4, type: 2}
+  attackRange: {fileID: 11400000, guid: 392667646a9289043a73c54e684906f1, type: 2}
+  sightRange: {fileID: 11400000, guid: 2113a9dc97d9c654c8dd12989149c35d, type: 2}
