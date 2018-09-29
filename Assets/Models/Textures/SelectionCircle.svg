@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    shape-rendering="crispEdges"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="SelectionCircle.svg">
   <defs
      id="defs2" />
@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="319.141"
+     inkscape:cx="233.53057"
      inkscape:cy="93.236879"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -92,9 +92,8 @@
          sodipodi:nodetypes="cccccccccccc"
          inkscape:connector-curvature="0"
          id="rect4555"
-         transform="scale(0.26458333)"
-         d="m 386.57031,903.4707 h -49.62109 v 50.33789 m 182.09961,0 V 903.4707 h -49.61914 m -132.48047,131.7617 v 50.3379 h 49.62109 m 82.85938,0 h 49.61914 v -50.3379"
-         style="fill:none;fill-opacity:0.50196078;stroke:#ffffff;stroke-width:17.90040398;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:38" />
+         d="M 101.77159,237.925 H 88.033333 v 13.9367 m 50.416667,0 V 237.925 h -13.73771 m -36.678957,36.47995 v 13.93671 h 13.738257 m 22.9407,0 H 138.45 v -13.93671"
+         style="fill:none;fill-opacity:0.50196078;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:38" />
     </g>
   </g>
 </svg>

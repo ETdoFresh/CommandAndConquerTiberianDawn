@@ -33,12 +33,20 @@ public class ClickAction : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         var results = Physics.RaycastAll(ray);
         foreach (var result in results)
+        {
+            if (result.collider.GetComponent<Unit>())
+            {
+                foreach (var unit in Selection)
+                    unit.GetComponent<StateMachine>()?.MoveTo(result.transform);
+                return;
+            }
             if (result.collider.GetComponent<Ground>())
             {
                 foreach (var unit in Selection)
                     unit.GetComponent<StateMachine>()?.MoveTo(result.point);
                 return;
             }
+        }
     }
 
     private void Attack()
@@ -46,11 +54,19 @@ public class ClickAction : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         var results = Physics.RaycastAll(ray);
         foreach (var result in results)
+        {
+            if (result.collider.GetComponent<Unit>())
+            {
+                foreach (var unit in Selection)
+                    unit.GetComponent<StateMachine>()?.AttackTo(result.transform);
+                return;
+            }
             if (result.collider.GetComponent<Ground>())
             {
                 foreach (var unit in Selection)
                     unit.GetComponent<StateMachine>()?.AttackTo(result.point);
                 return;
             }
+        }
     }
 }
