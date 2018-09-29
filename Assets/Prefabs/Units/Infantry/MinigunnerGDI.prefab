@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1660039242100646
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 114232208758219224}
   - component: {fileID: 195131414538240548}
   - component: {fileID: 65814874517498412}
+  - component: {fileID: 114522207397882704}
   m_Layer: 9
   m_Name: MinigunnerGDI
   m_TagString: Untagged
@@ -361,13 +362,25 @@ MonoBehaviour:
   attackRange: {fileID: 11400000, guid: bdeb14fb4086f8c4d89b1fb3d08222ea, type: 2}
   sightRange: {fileID: 11400000, guid: 2588f7619ebae044ab30cb87abbed704, type: 2}
   navMeshAgent: {fileID: 195131414538240548}
+--- !u!114 &114522207397882704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803141600753542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e0522351642e24982ea8ba3338ddea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projector: {fileID: 119887770091199836}
 --- !u!119 &119887770091199836
 Projector:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514167107954044}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_NearClipPlane: 0.1
   m_FarClipPlane: 2

@@ -5,7 +5,6 @@
 - [ ] Finish creating something awesome! 
 
 ## Iteration 1 Tasks
-- [ ] Select Multiple Units by Drag Box
 - [ ] Compute destination spaced out for each unit individually
 - [ ] Create Shroud/Fog
 
@@ -18,6 +17,7 @@
   - [ ] Make unit follow other units
 
 ## Iteration 1 Complete
+- [X] Select Multiple Units by Drag Box
 - [X] Improve the selection square around unit
 - [X] Make units individually moveable
 - [X] Make units selectable
