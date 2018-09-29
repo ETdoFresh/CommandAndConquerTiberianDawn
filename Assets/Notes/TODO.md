@@ -12,7 +12,7 @@
 - [ ] Implement Minigunner
   - [X] Make unit moveable
   - [X] Make unit selectable
-  - [ ] Make unit attack ground
+  - [X] Make unit attack ground
   - [ ] Make unit attack other units
   - [ ] Make unit follow other units
 

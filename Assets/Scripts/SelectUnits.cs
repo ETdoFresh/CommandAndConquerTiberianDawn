@@ -1,17 +1,14 @@
 ﻿using System.Text;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class SelectAndMove : MonoBehaviour
+public class SelectUnits : MonoBehaviour
 {
     public UnitSelection selection;
-    public RaycastHit[] results = new RaycastHit[10];
 
     bool isSelecting = false;
     Vector3 mousePosition1;
 
     Vector3 startTapPosition;
-    Vector3 endTapPosition;
     bool isTapping;
 
     void Update()
@@ -30,10 +27,6 @@ public class SelectAndMove : MonoBehaviour
         {
             OnDrag();
             OnTapDrag();
-        }
-        if (Input.GetMouseButton(1))
-        {
-            Move();
         }
     }
 
@@ -85,8 +78,6 @@ public class SelectAndMove : MonoBehaviour
 
     private void OnTapEnd()
     {
-        endTapPosition = Input.mousePosition;
-        var deltaPosition = endTapPosition - startTapPosition;
         if (isTapping) OnTap();
         isTapping = false;
     }
@@ -94,10 +85,9 @@ public class SelectAndMove : MonoBehaviour
     private void OnTap()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        int count = Physics.RaycastNonAlloc(ray, results);
-        for (int i = 0; i < count; i++)
+        var results = Physics.RaycastAll(ray);
+        foreach(var result in results)
         {
-            var result = results[i];
             var unit = result.collider.GetComponent<SelectableUnit>();
             if (unit)
             {
@@ -107,19 +97,6 @@ public class SelectAndMove : MonoBehaviour
                 return;
             }
         }
-    }
-
-    private void Move()
-    {
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Physics.RaycastNonAlloc(ray, results);
-        foreach (var result in results)
-            if (result.collider.GetComponent<Ground>())
-            {
-                foreach (var unit in selection)
-                    unit.GetComponent<NavMeshAgent>()?.SetDestination(result.point);
-                return;
-            }
     }
 
     private void NewSelectionToConsole()

@@ -28,6 +28,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1190652457758690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4330069235090640}
+  m_Layer: 9
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1514167107954044
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +103,7 @@ GameObject:
   - component: {fileID: 195131414538240548}
   - component: {fileID: 65814874517498412}
   - component: {fileID: 114522207397882704}
+  - component: {fileID: 114025582927203520}
   m_Layer: 9
   m_Name: MinigunnerGDI
   m_TagString: Untagged
@@ -125,6 +141,19 @@ Transform:
   m_Father: {fileID: 4542543329200998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4330069235090640
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190652457758690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.188, y: 0.346, z: 0.517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542543329200998}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4542543329200998
 Transform:
   m_ObjectHideFlags: 1
@@ -137,6 +166,7 @@ Transform:
   m_Children:
   - {fileID: 4752034400959698}
   - {fileID: 4121500152518674}
+  - {fileID: 4330069235090640}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -333,6 +363,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33, y: 0.66, z: 0.33}
   m_Center: {x: 0, y: 0.33, z: 0}
+--- !u!114 &114025582927203520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803141600753542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0bd2e338173d14b86ba8bb4aebd3dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTargetTransform: 0
+  targetTransform: {fileID: 0}
+  targetVector: {x: 0, y: 0, z: 0}
+  unit: {fileID: 114232208758219224}
+  navMeshAgent: {fileID: 195131414538240548}
+  state: 0
+  attackDuration: 1
+  lastAttackTime: 0
+  muzzlePrefab: {fileID: 1589508894204010, guid: f2eff0a076e63e34987801aeb47bfbac,
+    type: 2}
+  sparksPrefab: {fileID: 1380922811732350, guid: cbaa0f25bf4f51c46a55f7259f56cb38,
+    type: 2}
+  muzzleTransform: {fileID: 4330069235090640}
 --- !u!114 &114232208758219224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,7 +458,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 9999999
   avoidancePriority: 50
-  m_AngularSpeed: 1080
+  m_AngularSpeed: 2160
   m_StoppingDistance: 0.4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
