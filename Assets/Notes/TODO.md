@@ -13,15 +13,15 @@
 - [ ] Create Shroud/Fog
 
 ## Iteration 1 Active
-- [ ] Add health to unit
-- [ ] Add damage to weapon
-- [ ] Add death to unit
 - [ ] Add sound to gun
 - [ ] Add sounds to attack command
 - [ ] Add sounds to move command
 - [ ] Add sounds to death
 
 ## Iteration 1 Complete
+- [X] Add health to unit
+- [X] Add damage to weapon
+- [X] Add death to unit
 - [X] Add color property
 - [X] Connect speed to unit speed
 - [X] Connect attackRange to unit range

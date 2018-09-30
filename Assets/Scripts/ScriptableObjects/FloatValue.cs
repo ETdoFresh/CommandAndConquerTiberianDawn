@@ -6,8 +6,5 @@ public abstract class FloatValue : ScriptableObject
 
     public float Value { get { return value; } set { this.value = value; } }
 
-    public static implicit operator float (FloatValue floatValue)
-    {
-        return floatValue.value;
-    }
+    public static implicit operator float (FloatValue floatValue) => floatValue.value;
 }

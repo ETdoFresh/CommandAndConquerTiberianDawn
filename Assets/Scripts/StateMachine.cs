@@ -110,6 +110,17 @@ public class StateMachine : MonoBehaviour
         if (Time.time <= attackEndTime) return;
 
         lastAttackTime = Time.time;
+        if (isTargetTransform)
+        {
+            if (targetTransform.gameObject.activeSelf)
+                targetTransform.GetComponent<UnitHealth>()?.TakeDamage(unit.groundAttack);
+            else
+            {
+                MoveTo(transform.position);
+                return;
+            }
+        }
+
         var muzzle = Instantiate(muzzlePrefab, muzzleTransform.position, muzzleTransform.rotation);
         var sparks = Instantiate(sparksPrefab, Target, Quaternion.identity);
         Destroy(muzzle, 3);

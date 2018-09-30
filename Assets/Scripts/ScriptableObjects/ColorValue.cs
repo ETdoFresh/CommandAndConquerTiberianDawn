@@ -6,8 +6,5 @@ public abstract class ColorValue : ScriptableObject
 
     public Color Value { get { return value; } set { this.value = value; } }
 
-    public static implicit operator Color(ColorValue colorValue)
-    {
-        return colorValue.value;
-    }
+    public static implicit operator Color(ColorValue colorValue) => colorValue.value;
 }
