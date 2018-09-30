@@ -22,6 +22,7 @@
 - [ ] Add sounds to death
 
 ## Iteration 1 Complete
+- [X] Add color property
 - [X] Connect speed to unit speed
 - [X] Connect attackRange to unit range
 - [X] Add level 1 Cnc Map

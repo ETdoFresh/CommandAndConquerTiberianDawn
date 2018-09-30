@@ -8,6 +8,6 @@ public abstract class FloatValue : ScriptableObject
 
     public static implicit operator float (FloatValue floatValue)
     {
-        return floatValue ? floatValue.value : float.NaN;
+        return floatValue.value;
     }
 }

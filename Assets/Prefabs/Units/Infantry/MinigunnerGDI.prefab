@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 65814874517498412}
   - component: {fileID: 114522207397882704}
   - component: {fileID: 114025582927203520}
+  - component: {fileID: 114803415646342340}
   m_Layer: 9
   m_Name: MinigunnerGDI
   m_TagString: Untagged
@@ -160,7 +161,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803141600753542}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 2.08, y: 0, z: -5.040001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -275,7 +276,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5f6d4e61168df634b8842e96dc603f71, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +311,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b18346be34eef44abd5fb20ffdfa0b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -414,7 +415,6 @@ MonoBehaviour:
   speed: {fileID: 11400000, guid: e6b92e84c1f083c42b24abd6ef62213e, type: 2}
   attackRange: {fileID: 11400000, guid: bdeb14fb4086f8c4d89b1fb3d08222ea, type: 2}
   sightRange: {fileID: 11400000, guid: 2588f7619ebae044ab30cb87abbed704, type: 2}
-  navMeshAgent: {fileID: 195131414538240548}
 --- !u!114 &114522207397882704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,6 +427,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projector: {fileID: 119887770091199836}
+--- !u!114 &114803415646342340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803141600753542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fa17168c57cb7489afe47168557148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialToTint: {fileID: 2100000, guid: 5f6d4e61168df634b8842e96dc603f71, type: 2}
+  teamColor: {fileID: 11400000, guid: 3038badd05849ae42bfa5f84e51857d3, type: 2}
 --- !u!119 &119887770091199836
 Projector:
   m_ObjectHideFlags: 1
