@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 public class Unit : MonoBehaviour
 {
@@ -26,16 +25,4 @@ public class Unit : MonoBehaviour
     public Speed speed;
     public AttackRange attackRange;
     public SightRange sightRange;
-
-    [SerializeField] private NavMeshAgent navMeshAgent;
-
-    private void OnValidate()
-    {
-        navMeshAgent = navMeshAgent ?? GetComponent<NavMeshAgent>();
-    }
-
-    private void Update()
-    {
-        if (navMeshAgent) navMeshAgent.speed = speed;
-    }
 }

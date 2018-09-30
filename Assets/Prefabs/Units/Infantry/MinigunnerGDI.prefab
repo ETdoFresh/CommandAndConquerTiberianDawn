@@ -380,7 +380,6 @@ MonoBehaviour:
   unit: {fileID: 114232208758219224}
   navMeshAgent: {fileID: 195131414538240548}
   state: 0
-  attackDuration: 1
   lastAttackTime: 0
   muzzlePrefab: {fileID: 1589508894204010, guid: f2eff0a076e63e34987801aeb47bfbac,
     type: 2}

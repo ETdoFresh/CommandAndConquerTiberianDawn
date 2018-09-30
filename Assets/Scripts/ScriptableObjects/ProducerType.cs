@@ -1,1 +1,3 @@
-﻿public class ProducerType : FloatValue { }
+﻿using UnityEngine;
+
+public class ProducerType : ScriptableObject { }

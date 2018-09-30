@@ -11,13 +11,11 @@ public class StateMachine : MonoBehaviour
     public Vector3 Target { get { return isTargetTransform ? targetTransform ? targetTransform.position : transform.position : targetVector; } }
 
     public Unit unit;
-    public float AttackRange { get { return unit.attackRange.Value; } }
     public NavMeshAgent navMeshAgent;
 
     public enum State { Idle, Move, Attack }
     public State state = State.Idle;
 
-    public float attackDuration = 1;
     public float lastAttackTime;
 
     public GameObject muzzlePrefab;
@@ -32,6 +30,7 @@ public class StateMachine : MonoBehaviour
 
     private void Update()
     {
+        navMeshAgent.speed = unit.speed / 6;
         switch (state)
         {
             case State.Idle:
@@ -90,7 +89,7 @@ public class StateMachine : MonoBehaviour
     private void ContinueAttack()
     {
         var distance = Vector3.Distance(transform.position, Target);
-        if (distance > AttackRange)
+        if (distance > unit.attackRange)
             Continue();
         else
         {
@@ -107,7 +106,7 @@ public class StateMachine : MonoBehaviour
 
     private void Attack()
     {
-        var attackEndTime = lastAttackTime + attackDuration;
+        var attackEndTime = lastAttackTime + unit.coolDown / 30;
         if (Time.time <= attackEndTime) return;
 
         lastAttackTime = Time.time;

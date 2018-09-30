@@ -13,8 +13,6 @@
 - [ ] Create Shroud/Fog
 
 ## Iteration 1 Active
-- [ ] Connect speed to unit speed
-- [ ] Connect attackRange to unit range
 - [ ] Add health to unit
 - [ ] Add damage to weapon
 - [ ] Add death to unit
@@ -24,6 +22,8 @@
 - [ ] Add sounds to death
 
 ## Iteration 1 Complete
+- [X] Connect speed to unit speed
+- [X] Connect attackRange to unit range
 - [X] Add level 1 Cnc Map
 - [X] Implement Minigunner
   - [X] Make unit moveable

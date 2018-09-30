@@ -11,3 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e74dc02b2ad6014890047629294e202, type: 3}
   m_Name: Minigunner
   m_EditorClassIdentifier: 
+  value: 100
