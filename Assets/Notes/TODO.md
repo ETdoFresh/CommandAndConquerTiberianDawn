@@ -13,12 +13,12 @@
 - [ ] Create Shroud/Fog
 
 ## Iteration 1 Active
-- [ ] Add sound to gun
 - [ ] Add sounds to attack command
 - [ ] Add sounds to move command
 - [ ] Add sounds to death
 
 ## Iteration 1 Complete
+- [X] Add sound to gun
 - [X] Add health to unit
 - [X] Add damage to weapon
 - [X] Add death to unit

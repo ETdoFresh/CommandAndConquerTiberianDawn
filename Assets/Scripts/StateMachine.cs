@@ -12,6 +12,7 @@ public class StateMachine : MonoBehaviour
 
     public Unit unit;
     public NavMeshAgent navMeshAgent;
+    private AudioSource audioSource;
 
     public enum State { Idle, Move, Attack }
     public State state = State.Idle;
@@ -26,6 +27,7 @@ public class StateMachine : MonoBehaviour
     {
         unit = unit ?? GetComponent<Unit>();
         navMeshAgent = navMeshAgent ?? GetComponent<NavMeshAgent>();
+        audioSource = audioSource ?? GetComponentInChildren<AudioSource>();
     }
 
     private void Update()
@@ -121,6 +123,7 @@ public class StateMachine : MonoBehaviour
             }
         }
 
+        audioSource?.Play();
         var muzzle = Instantiate(muzzlePrefab, muzzleTransform.position, muzzleTransform.rotation);
         var sparks = Instantiate(sparksPrefab, Target, Quaternion.identity);
         Destroy(muzzle, 3);
